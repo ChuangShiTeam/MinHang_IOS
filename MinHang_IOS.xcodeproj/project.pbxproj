@@ -15,6 +15,8 @@
 		04DB91291F925DBA009844B9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DB91281F925DBA009844B9 /* main.m */; };
 		04DB91331F925DBA009844B9 /* MinHang_IOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DB91321F925DBA009844B9 /* MinHang_IOSTests.m */; };
 		04DB913E1F925DBA009844B9 /* MinHang_IOSUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DB913D1F925DBA009844B9 /* MinHang_IOSUITests.m */; };
+		04DB914C1F926AC3009844B9 /* src in Resources */ = {isa = PBXBuildFile; fileRef = 04DB914B1F926AC3009844B9 /* src */; };
+		04DB91541F927810009844B9 /* image in Resources */ = {isa = PBXBuildFile; fileRef = 04DB91531F92780F009844B9 /* image */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,9 @@
 		04DB91391F925DBA009844B9 /* MinHang_IOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MinHang_IOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04DB913D1F925DBA009844B9 /* MinHang_IOSUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MinHang_IOSUITests.m; sourceTree = "<group>"; };
 		04DB913F1F925DBA009844B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04DB914B1F926AC3009844B9 /* src */ = {isa = PBXFileReference; lastKnownFileType = folder; path = src; sourceTree = "<group>"; };
+		04DB91501F927436009844B9 /* MinHang_IOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MinHang_IOS.entitlements; sourceTree = "<group>"; };
+		04DB91531F92780F009844B9 /* image */ = {isa = PBXFileReference; lastKnownFileType = folder; path = image; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +90,7 @@
 				04DB91311F925DBA009844B9 /* MinHang_IOSTests */,
 				04DB913C1F925DBA009844B9 /* MinHang_IOSUITests */,
 				04DB91171F925DBA009844B9 /* Products */,
+				04DB914D1F927436009844B9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +107,9 @@
 		04DB91181F925DBA009844B9 /* MinHang_IOS */ = {
 			isa = PBXGroup;
 			children = (
+				04DB91531F92780F009844B9 /* image */,
+				04DB91501F927436009844B9 /* MinHang_IOS.entitlements */,
+				04DB914B1F926AC3009844B9 /* src */,
 				04DB91191F925DBA009844B9 /* AppDelegate.h */,
 				04DB911A1F925DBA009844B9 /* AppDelegate.m */,
 				04DB911C1F925DBA009844B9 /* ViewController.h */,
@@ -130,6 +139,13 @@
 				04DB913F1F925DBA009844B9 /* Info.plist */,
 			);
 			path = MinHang_IOSUITests;
+			sourceTree = "<group>";
+		};
+		04DB914D1F927436009844B9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +216,11 @@
 					04DB91151F925DBA009844B9 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.WAC = {
+								enabled = 0;
+							};
+						};
 					};
 					04DB912D1F925DBA009844B9 = {
 						CreatedOnToolsVersion = 9.0;
@@ -239,8 +260,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				04DB91261F925DBA009844B9 /* LaunchScreen.storyboard in Resources */,
+				04DB91541F927810009844B9 /* image in Resources */,
 				04DB91231F925DBA009844B9 /* Assets.xcassets in Resources */,
 				04DB91211F925DBA009844B9 /* Main.storyboard in Resources */,
+				04DB914C1F926AC3009844B9 /* src in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,7 +393,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -419,7 +442,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -430,13 +453,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yongqiang Zhong (558728E6N5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7A5K69VZRP;
 				INFOPLIST_FILE = MinHang_IOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "NowUI.MinHang-IOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nowui.minhang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -444,13 +470,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Yongqiang Zhong (7A5K69VZRP)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7A5K69VZRP;
 				INFOPLIST_FILE = MinHang_IOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "NowUI.MinHang-IOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.nowui.minhang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
